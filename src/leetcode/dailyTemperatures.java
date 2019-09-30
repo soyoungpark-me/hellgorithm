@@ -1,27 +1,22 @@
 package leetcode;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.Stack;
 
 public class dailyTemperatures {
-    public static int[] dailyTemperatures(int[] T) {
+    public int[] dailyTemperatures(int[] T) {
         int size = T.length;
         int[] result = new int[size];
-        Set<Integer> set = new HashSet<>();
+        Stack<Integer> stack = new Stack();
 
         for(int i = 0; i < size - 1; i++) {
-            set.add(i);
+            stack.push(i);
+            while (T[stack.peek()] < T[i + 1]) {
+                int index = stack.pop();
+                result[index] = (i + 1) - index;
 
-            for (Iterator<Integer> it = set.iterator(); it.hasNext();) {
-                Integer index = it.next();
-                if (T[index] < T[i + 1]) {
-                    result[index] = (i + 1) - index;
-                    it.remove();
-                }
+                if (stack.isEmpty()) break;
             }
         }
-
         return result;
     }
 }
