@@ -11,7 +11,6 @@ public class ClimbStairs {
             a = b;
             b = tmp;
         }
-
         return b;
     }
 }
