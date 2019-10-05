@@ -1,6 +1,6 @@
 package leetcode;
 
-public class ClimbStairs {
+public class ClimbingStairs {
     public int climbStairs(int n) {
         int a = 1, b = 1, tmp;
 
