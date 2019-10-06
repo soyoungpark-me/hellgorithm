@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.Stack;
 
-public class dailyTemperatures {
+public class DailyTemperatures {
     public int[] dailyTemperatures(int[] T) {
         int size = T.length;
         int[] result = new int[size];
