@@ -1,4 +1,4 @@
-package leetcode.kotlin
+package leetcode.easy
 
 /*
  * 14. Longest Common Prefix
